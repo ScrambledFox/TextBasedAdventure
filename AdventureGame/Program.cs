@@ -86,6 +86,16 @@ namespace AdventureGame
             }
 
         }
+        static int countScroll = 0;
+        static void WonGame() {
+            if (countScroll == 9)
+            {
+                Console.WriteLine("Congratulations you have collected all nine scrolls, now you can go eat the cake!");
+            }
+            else {
+                 
+            }
+        }
 
     }
 }
