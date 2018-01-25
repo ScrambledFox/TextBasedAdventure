@@ -36,11 +36,16 @@ namespace AdventureGame
             Console.WriteLine("-----------------------------------------------------");
 
             Console.WriteLine("Hello, brave warrior. Welcome to the world of The Nine Scrolls.");
+            // Title screen End
 
+            // Ask for the player's name, confirm it, then start adventure.
             AskForName();
-
             Console.WriteLine("Okay then, " + playerName + ". Your adventure will begin now!");
 
+            // Chat test
+            Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!", Chat.ChatStance.Offensive);
+
+            // Item tests
             Item item = new Item("Sword of life", 245);
             Item item1 = new Item("Bread", 5);
             Item item2 = new Item("Apple", 2);
@@ -53,6 +58,9 @@ namespace AdventureGame
 
         }
 
+        /// <summary>
+        /// This method asks the player for his/her name in a white text, then asks for confirmation
+        /// </summary>
         static void AskForName()
         {
 
@@ -64,6 +72,9 @@ namespace AdventureGame
 
         }
 
+        /// <summary>
+        /// This method lets the player confirm his/her name.
+        /// </summary>
         static void CheckNameConfirmation()
         {
 
@@ -86,9 +97,11 @@ namespace AdventureGame
             }
 
         }
-        static int countScroll = 0;
+
+        static int amountScrolls = 0;
+
         static void WonGame() {
-            if (countScroll == 9)
+            if (amountScrolls == 9)
             {
                 Console.WriteLine("Congratulations you have collected all nine scrolls, now you can go eat the cake!");
             }
