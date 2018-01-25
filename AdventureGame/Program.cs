@@ -29,7 +29,7 @@ namespace AdventureGame
         public static void StartGame()
         {
             // Title Screen
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine("The Nine Scrolls");
             Console.WriteLine("Welcome to this Text-Based Adventure Game!");
