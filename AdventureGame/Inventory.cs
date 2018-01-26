@@ -10,6 +10,12 @@ namespace AdventureGame {
 
         static List<Item> inventory = new List<Item>();
 
+        public enum ArmourSlots
+        {
+            Head, Chest, PauldronLeft, PauldronRight, Legs, BootsLeft, BootsRight, GlovesLeft, GlovesRight
+        }
+
+
         public static void AddItem (Item item) {
             inventory.Add(item);
             Console.ForegroundColor = ConsoleColor.DarkGray;
