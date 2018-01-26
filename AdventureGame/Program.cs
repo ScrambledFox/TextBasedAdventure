@@ -36,6 +36,9 @@ namespace AdventureGame
             AskForName();
             Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
 
+            Chat.Wait();
+            Chat.ClearScreen();
+
             // Chat test
             Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
 
@@ -68,14 +71,14 @@ namespace AdventureGame
         /// </summary>
         static void CheckNameConfirmation()
         {
-            if (playerName.Length > 20) {
+            if (playerName.Length > 40) {
                 Chat.Notification("Your name is too long warrior, we would never remember you.");
                 AskForName();
                 return;
             }
 
             string answer;
-            Chat.Notification("So your name is " + playerName + "? (Answer with Yes or No)");
+            Chat.Notification("So your name is " + playerName + "? (Answer with Yes or No)", true);
             answer = Console.ReadLine().ToLower();
 
             if (answer == "yes")

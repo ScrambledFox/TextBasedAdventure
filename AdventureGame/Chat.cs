@@ -34,7 +34,7 @@ namespace AdventureGame
                 Console.SetCursorPosition((Console.WindowWidth - text[i].Length) / 2, Console.CursorTop);
                 Console.WriteLine(text[i]);
             }
-            
+
         }
 
         /// <summary>
@@ -42,9 +42,11 @@ namespace AdventureGame
         /// </summary>
         /// <param name="nameOfSource">The name of the talking source.</param>
         /// <param name="message">The message that will be displayed.</param>
-        public static void Say (string nameOfSource, string message) {
+        public static void Say ( string nameOfSource, string message ) {
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
+
+            Console.SetCursorPosition(10, Console.CursorTop);
             Console.WriteLine(nameOfSource + " says: " + message);
         }
 
@@ -53,17 +55,34 @@ namespace AdventureGame
         /// </summary>
         /// <param name="text">The message that will be displayed.</param>
         /// <param name="sameLine">Will the next chat element be displayed on the same line?</param>>
-        public static void Notification ( string text, bool sameLine = false )
-        {
+        public static void Notification ( string text, bool sameLine = false, bool doSpace = true ) {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
+
+            Console.SetCursorPosition(10, Console.CursorTop);
             if (sameLine) {
                 Console.Write(text + "       ");
             } else {
                 Console.WriteLine(text);
-                Console.WriteLine("");
+                if (doSpace) {
+                    Console.WriteLine("");
+                }
             }
         }
+
+        public static void ClearScreen () {
+            Console.Clear();
+        }
+
+        public static void Wait () {
+            Console.ReadKey();
+        }
+
+        public static void DoSpace () {
+            Console.WriteLine("");
+        }
+
+
 
     }
 }
