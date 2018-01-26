@@ -70,7 +70,7 @@ namespace AdventureGame
             }
         }
 
-        public static void ClearScreen () {
+        public static void Clear () {
             Console.Clear();
         }
 
@@ -80,6 +80,14 @@ namespace AdventureGame
 
         public static void DoSpace () {
             Console.WriteLine("");
+        }
+
+        public static string GetAction () {
+            Chat.Notification("What do you want to do?", true);
+
+            string answer = Console.ReadLine();
+            Chat.Clear();
+            return answer;
         }
 
 

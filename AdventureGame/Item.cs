@@ -8,12 +8,19 @@ using System;
 namespace AdventureGame {
     public class Item {
 
+        public enum ItemType
+        {
+            Food, Armour, Weapon, Normal
+        };
+
         string name;
         float value;
+        ItemType itemType;
 
-        public Item ( string name, float value ) {
+        public Item ( string name, float value, ItemType itemType = ItemType.Normal) {
             this.name = name;
             this.value = value;
+            this.itemType = itemType;
         }
 
         public void DrawInformation () {

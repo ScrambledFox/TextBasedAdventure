@@ -37,21 +37,15 @@ namespace AdventureGame
             Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
 
             Chat.Wait();
-            Chat.ClearScreen();
+            Chat.Clear();
 
             // Chat test
             Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
 
-            // Item tests
-            Item item = new Item("Sword of life", 245);
-            Item item1 = new Item("Bread", 5);
-            Item item2 = new Item("Apple", 2);
-            Item item3 = new Item("Hide helmet", 245);
-            Inventory.AddItem(item);
-            Inventory.AddItem(item1);
-            Inventory.AddItem(item2);
-            Inventory.AddItem(item3);
-            Inventory.DisplayItemsInInventory();
+            Chat.GetAction();
+            
+            // Items test
+            Inventory.AddItem(Items.apple);
 
         }
 
@@ -61,6 +55,7 @@ namespace AdventureGame
         static void AskForName() {
             Chat.Notification("What is your name?", true);
             playerName = Console.ReadLine();
+            Chat.DoSpace();
 
             CheckNameConfirmation();
 
@@ -80,6 +75,8 @@ namespace AdventureGame
             string answer;
             Chat.Notification("So your name is " + playerName + "? (Answer with Yes or No)", true);
             answer = Console.ReadLine().ToLower();
+
+            Chat.DoSpace();
 
             if (answer == "yes")
             {
