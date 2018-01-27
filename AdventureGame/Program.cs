@@ -13,6 +13,7 @@ namespace AdventureGame
         static void Main()
         {
 
+            Console.SetWindowSize(150, 32);
             Game.StartGame();
             Console.ReadKey();
 
@@ -27,47 +28,67 @@ namespace AdventureGame
         public static void StartGame()
         {
             // Title Screen
-            Console.ForegroundColor = ConsoleColor.Red;
+            Chat.TitleScreen();
 
-            Console.WriteLine("The Nine Scrolls");
-            Console.WriteLine("Welcome to this Text-Based Adventure Game!");
-            Console.WriteLine("-----------------------------------------------------");
-
-            Console.WriteLine("Hello, brave warrior. Welcome to the world of The Nine Scrolls.");
-
+            // Ask for the player's name, confirm it, then start adventure.
             AskForName();
+            Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
 
+<<<<<<< HEAD
             Console.WriteLine("Okay then, " + Player.Name + ". Your adventure will begin now!");
+=======
+            Chat.Wait();
+            Chat.Clear();
+>>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
 
-            Item item = new Item("Sword of life", 245);
-            Item item1 = new Item("Bread", 5);
-            Item item2 = new Item("Apple", 2);
-            Item item3 = new Item("Hide helmet", 245);
-            Inventory.AddItem(item);
-            Inventory.AddItem(item1);
-            Inventory.AddItem(item2);
-            Inventory.AddItem(item3);
-            Inventory.DisplayItemsInInventory();
+            // Chat test
+            Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
+
+            Chat.GetAction();
+            
+            // Items test
+            Inventory.AddItem(Items.apple);
 
         }
 
-        static void AskForName()
-        {
-
+<<<<<<< HEAD
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("What is your name?");
             Player.Name = Console.ReadLine();
+=======
+        /// <summary>
+        /// This method asks the player for his/her name in a white text, then asks for confirmation
+        /// </summary>
+        static void AskForName() {
+            Chat.Notification("What is your name?", true);
+            playerName = Console.ReadLine();
+            Chat.DoSpace();
+>>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
 
             CheckNameConfirmation();
 
         }
 
+        /// <summary>
+        /// This method lets the player confirm his/her name.
+        /// </summary>
         static void CheckNameConfirmation()
         {
+            if (playerName.Length > 40) {
+                Chat.Notification("Your name is too long warrior, we would never remember you.");
+                AskForName();
+                return;
+            }
 
             string answer;
+<<<<<<< HEAD
             Console.WriteLine("So your name is " + Player.Name + "? (Answer with Yes or No)");
+=======
+            Chat.Notification("So your name is " + playerName + "? (Answer with Yes or No)", true);
+>>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
             answer = Console.ReadLine().ToLower();
+
+            Chat.DoSpace();
 
             if (answer == "yes")
             {
@@ -80,10 +101,22 @@ namespace AdventureGame
             }
             else
             {
-                Console.WriteLine("I don't understand...");
+                Chat.Notification("I don't understand...");
                 CheckNameConfirmation();
             }
 
+        }
+
+        static int amountScrolls = 0;
+
+        static void WonGame() {
+            if (amountScrolls == 9)
+            {
+                Chat.Notification("Congratulations you have collected all nine scrolls, now you can go eat the cake!");
+            }
+            else {
+                 
+            }
         }
 
     }

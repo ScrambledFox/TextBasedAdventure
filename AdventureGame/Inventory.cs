@@ -11,21 +11,27 @@ namespace AdventureGame {
 
         static List<Item> inventory = new List<Item>();
 
+<<<<<<< HEAD
         // Methods
+=======
+        public enum ArmourSlots
+        {
+            Head, Chest, PauldronLeft, PauldronRight, Legs, BootsLeft, BootsRight, GlovesLeft, GlovesRight
+        }
+
+>>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
 
         public static void AddItem (Item item) {
             inventory.Add(item);
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("Added {0} to backpack.", item.GetName());
+            Chat.Notification("Added " + item.GetName() + " to backpack.");
         }
 
         public static void DisplayItemsInInventory () {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("You are currently carrying:");
+            Chat.Notification("You are currently carrying:", false, false);
             foreach (var item in inventory) {
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine(item.GetName());
+                Chat.Notification(item.GetName(), false, false);
             }
+            Chat.DoSpace();
         }
 
     }
