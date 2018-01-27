@@ -8,7 +8,9 @@ namespace AdventureGame {
     public static class Actions {
 
         public static void Decoder (string action) {
+            switch (action) {
 
+            }
         }
 
     }
