@@ -45,11 +45,7 @@
     <Compile Include="Chat.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Item.cs" />
-<<<<<<< HEAD
-    <Compile Include="Player.cs" />
-=======
     <Compile Include="Items.cs" />
->>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

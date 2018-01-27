@@ -25,6 +25,8 @@ namespace AdventureGame
 
     public static class Game
     {
+        public static string playerName;
+
         public static void StartGame()
         {
             // Title Screen
@@ -34,12 +36,8 @@ namespace AdventureGame
             AskForName();
             Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
 
-<<<<<<< HEAD
-            Console.WriteLine("Okay then, " + Player.Name + ". Your adventure will begin now!");
-=======
             Chat.Wait();
             Chat.Clear();
->>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
 
             // Chat test
             Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
@@ -51,11 +49,6 @@ namespace AdventureGame
 
         }
 
-<<<<<<< HEAD
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("What is your name?");
-            Player.Name = Console.ReadLine();
-=======
         /// <summary>
         /// This method asks the player for his/her name in a white text, then asks for confirmation
         /// </summary>
@@ -63,7 +56,6 @@ namespace AdventureGame
             Chat.Notification("What is your name?", true);
             playerName = Console.ReadLine();
             Chat.DoSpace();
->>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
 
             CheckNameConfirmation();
 
@@ -81,11 +73,7 @@ namespace AdventureGame
             }
 
             string answer;
-<<<<<<< HEAD
-            Console.WriteLine("So your name is " + Player.Name + "? (Answer with Yes or No)");
-=======
             Chat.Notification("So your name is " + playerName + "? (Answer with Yes or No)", true);
->>>>>>> 4d4a3367b3218f2ec51a618933019e74a916a2f9
             answer = Console.ReadLine().ToLower();
 
             Chat.DoSpace();
@@ -96,7 +84,6 @@ namespace AdventureGame
             }
             else if (answer == "no")
             {
-                Player.ResetName();
                 AskForName();
             }
             else
@@ -107,8 +94,6 @@ namespace AdventureGame
 
         }
 
-
-        // Scroll win
         static int amountScrolls = 0;
 
         static void WonGame() {
