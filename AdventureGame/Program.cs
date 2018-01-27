@@ -30,22 +30,23 @@ namespace AdventureGame
         public static void StartGame()
         {
             // Title Screen
-            Chat.TitleScreen();
+            //Chat.TitleScreen();
 
             // Ask for the player's name, confirm it, then start adventure.
-            AskForName();
-            Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
+            //AskForName();
+            //Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
 
-            Chat.Wait();
-            Chat.Clear();
+            //Chat.Wait();
+            //Chat.Clear();
 
             // Chat test
-            Actions.Decoder("Find apples");
+            Actions.Decoder(Chat.GetAction());
+            
 
-            Chat.GetAction();
+            //Chat.GetAction();
             
             // Items test
-            Inventory.AddItem(Items.apple);
+            //Inventory.AddItem(Items.apple);
 
         }
 

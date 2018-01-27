@@ -24,6 +24,10 @@ namespace AdventureGame {
                     Chat.Error("This action is not a valid action");
                     break;
                 case "find":
+                    FindAction(GetWordFromAction(action, 2));
+                    break;
+                case "search":
+                    FindAction(GetWordFromAction(action, 2));
                     break;
                 case "attack":
                     break;
@@ -47,6 +51,24 @@ namespace AdventureGame {
 
             Chat.Notification(tempString);
             return tempString;
+        }
+
+        static void FindAction (string objectToFind) {
+            switch (objectToFind) {
+                default:
+                    Chat.Notification("You didn't find what you were searching for.");
+                    break;
+                case "apple":
+                    Chat.Notification("You found 2 apples");
+                    Inventory.AddItem(Items.apple);
+                    Inventory.AddItem(Items.apple);
+                    break;
+                case "apples":
+                    Chat.Notification("You found 2 apples");
+                    Inventory.AddItem(Items.apple);
+                    Inventory.AddItem(Items.apple);
+                    break;
+            }
         }
 
     }
