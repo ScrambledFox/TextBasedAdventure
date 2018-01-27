@@ -25,6 +25,8 @@ namespace AdventureGame {
             this.name = name;
             this.value = value;
             this.itemType = itemType;
+
+            Items.itemNames.Add(name.ToLower(), this);
         }
 
         public Item ( string name, float value, ItemType itemType = ItemType.Normal, ArmourSlot armourSlot = ArmourSlot.Chest) {
@@ -32,6 +34,8 @@ namespace AdventureGame {
             this.value = value;
             this.itemType = itemType;
             this.armourSlot = armourSlot;
+
+            Items.itemNames.Add(name.ToLower(), this);
         }
 
         public void DrawInformation () {

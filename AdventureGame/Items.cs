@@ -17,6 +17,8 @@ namespace AdventureGame
     public static class Items
     {
 
+        public static Dictionary<string, Item> itemNames = new Dictionary<string, Item>();
+
         /// Food Items
         public static Item apple = new Item(
             "Apple",

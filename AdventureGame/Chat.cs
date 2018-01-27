@@ -76,7 +76,10 @@ namespace AdventureGame
         }
 
         public static void Clear () {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
+            Console.WriteLine("");
         }
 
         public static void Wait () {

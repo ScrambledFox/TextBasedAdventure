@@ -29,6 +29,8 @@ namespace AdventureGame
 
         public static void StartGame()
         {
+            Chat.Clear();
+
             // Title Screen
             //Chat.TitleScreen();
 
@@ -40,8 +42,10 @@ namespace AdventureGame
             //Chat.Clear();
 
             // Chat test
-            Actions.Decoder(Chat.GetAction());
-            
+            while (true) {
+                Chat.Clear();
+                Actions.Decoder(Chat.GetAction());
+            }
 
             //Chat.GetAction();
             
