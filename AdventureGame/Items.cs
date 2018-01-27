@@ -39,7 +39,8 @@ namespace AdventureGame
         public static Item helmetIron = new Item(
             "Iron Helmet",
             25,
-            Item.ItemType.Armour
+            Item.ItemType.Armour,
+            Item.ArmourSlot.Head
             );
 
     }

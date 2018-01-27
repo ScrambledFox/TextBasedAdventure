@@ -43,7 +43,7 @@ namespace AdventureGame
         /// <param name="nameOfSource">The name of the talking source.</param>
         /// <param name="message">The message that will be displayed.</param>
         public static void Say ( string nameOfSource, string message ) {
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
 
             Console.SetCursorPosition(10, Console.CursorTop);

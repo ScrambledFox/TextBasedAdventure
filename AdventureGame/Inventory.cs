@@ -8,13 +8,7 @@ namespace AdventureGame {
     public static class Inventory {
 
 
-        static List<Item> inventory = new List<Item>();
-
-        public enum ArmourSlots
-        {
-            Head, Chest, PauldronLeft, PauldronRight, Legs, BootsLeft, BootsRight, GlovesLeft, GlovesRight
-        }
-
+        static List<Item> inventory = new List<Item>(
 
         public static void AddItem (Item item) {
             inventory.Add(item);
