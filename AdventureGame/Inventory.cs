@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 namespace AdventureGame {
     public static class Inventory {
 
+        // Fields
 
         static List<Item> inventory = new List<Item>();
+
+        // Methods
 
         public static void AddItem (Item item) {
             inventory.Add(item);

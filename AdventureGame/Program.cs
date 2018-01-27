@@ -24,8 +24,6 @@ namespace AdventureGame
 
     public static class Game
     {
-        public static string playerName;
-
         public static void StartGame()
         {
             // Title Screen
@@ -39,7 +37,7 @@ namespace AdventureGame
 
             AskForName();
 
-            Console.WriteLine("Okay then, " + playerName + ". Your adventure will begin now!");
+            Console.WriteLine("Okay then, " + Player.Name + ". Your adventure will begin now!");
 
             Item item = new Item("Sword of life", 245);
             Item item1 = new Item("Bread", 5);
@@ -58,7 +56,7 @@ namespace AdventureGame
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("What is your name?");
-            playerName = Console.ReadLine();
+            Player.Name = Console.ReadLine();
 
             CheckNameConfirmation();
 
@@ -68,7 +66,7 @@ namespace AdventureGame
         {
 
             string answer;
-            Console.WriteLine("So your name is " + playerName + "? (Answer with Yes or No)");
+            Console.WriteLine("So your name is " + Player.Name + "? (Answer with Yes or No)");
             answer = Console.ReadLine().ToLower();
 
             if (answer == "yes")
@@ -77,6 +75,7 @@ namespace AdventureGame
             }
             else if (answer == "no")
             {
+                Player.ResetName();
                 AskForName();
             }
             else
