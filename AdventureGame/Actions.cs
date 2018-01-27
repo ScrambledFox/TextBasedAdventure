@@ -28,6 +28,8 @@ namespace AdventureGame {
                     break;
                 case "search":
                     FindAction(GetWordFromAction(action, 2));
+                case "look":
+                    FindAction(GetWordFromAction(action, 2));
                     break;
                 case "attack":
                     break;
