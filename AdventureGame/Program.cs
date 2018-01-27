@@ -94,6 +94,8 @@ namespace AdventureGame
 
         }
 
+
+        // Scroll win
         static int amountScrolls = 0;
 
         static void WonGame() {
