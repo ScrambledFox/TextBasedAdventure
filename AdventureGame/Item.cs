@@ -1,5 +1,5 @@
 ﻿/*
- * The Nine Scrolls
+ * The Nine Scrolls (C)
  * by Joris (A.J.) Lodewijks, 05/09/2017
  *
  */
