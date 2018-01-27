@@ -13,7 +13,7 @@ namespace AdventureGame {
     public static class Inventory {
 
 
-        static List<Item> inventory = new List<Item>(
+        static List<Item> inventory = new List<Item>();
 
         public static void AddItem (Item item) {
             inventory.Add(item);

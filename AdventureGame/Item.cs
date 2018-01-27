@@ -27,7 +27,7 @@ namespace AdventureGame {
             this.itemType = itemType;
         }
 
-        public Item ( string name, float value, ItemType itemType = ItemType.Normal,  ArmourSlot armourSlot) {
+        public Item ( string name, float value, ItemType itemType = ItemType.Normal, ArmourSlot armourSlot = ArmourSlot.Chest) {
             this.name = name;
             this.value = value;
             this.itemType = itemType;

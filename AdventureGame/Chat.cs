@@ -95,6 +95,13 @@ namespace AdventureGame
             return answer;
         }
 
+        public static void Error (string message) {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(message);
+        }
+
 
 
     }

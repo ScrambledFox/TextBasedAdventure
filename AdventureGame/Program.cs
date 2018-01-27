@@ -40,7 +40,7 @@ namespace AdventureGame
             Chat.Clear();
 
             // Chat test
-            Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
+            Actions.Decoder("Find apples");
 
             Chat.GetAction();
             

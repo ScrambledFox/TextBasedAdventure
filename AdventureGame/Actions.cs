@@ -12,10 +12,41 @@ using System.Threading.Tasks;
 namespace AdventureGame {
     public static class Actions {
 
-        public static void Decoder (string action) {
-            switch (action) {
+        // First get the first keyword of the string, this is mostly the thing that a player wants to do.
 
+
+        public static void Decoder (string action) {
+            action = action.ToLower();
+            string actionToDo = GetWordFromAction(action, 1);
+
+            switch (actionToDo) {
+                default:
+                    Chat.Error("This action is not a valid action");
+                    break;
+                case "find":
+                    break;
+                case "attack":
+                    break;
+                case "go":
+                    break;
             }
+        }
+
+        static string GetWordFromAction ( string stringToCut, int word = 1 ) {
+            string tempString = stringToCut + " ";
+            int spaceIndex = 0;
+
+            for (int i = 1; i < word; i++) {
+                // Find apples
+                spaceIndex = tempString.IndexOf(' ');
+                tempString = tempString.Substring(spaceIndex + 1);
+            }
+
+            spaceIndex = tempString.IndexOf(' ');
+            tempString = tempString.Substring(0, spaceIndex);
+
+            Chat.Notification(tempString);
+            return tempString;
         }
 
     }
