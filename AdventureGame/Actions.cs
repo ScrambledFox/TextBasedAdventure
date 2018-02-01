@@ -14,6 +14,8 @@ namespace AdventureGame {
 
         // First get the first keyword of the string, this is mostly the thing that a player wants to do.
 
+        static string[] keywordsToIgnore = new string[] { "for", "some", "few", "a", "an" };
+
 
         public static void Decoder (string action) {
             action = action.ToLower();
@@ -241,24 +243,30 @@ namespace AdventureGame {
             spaceIndex = tempString.IndexOf(' ');
             tempString = tempString.Substring(0, spaceIndex);
 
-            Chat.Notification("Found an action: " + tempString);
+            Chat.Notification("Found an keyword: " + tempString);
             return tempString;
         }
 
         static void Find (string action) {
-            string secondTerm = GetWordFromString(action, 2);
+            int wordIndex = 2;
+            string stringToTest = "";
 
-            if (secondTerm == "for") {
-                secondTerm = GetWordFromString(action, 3);
-            }
-            if (Items.itemNames.ContainsKey(secondTerm)) {
-                int amount = 5;
-                Chat.Notification("You found " + amount + " " + secondTerm);
-                for (int i = 0; i < amount; i++) {
-                    Inventory.AddItem(Items.itemNames[secondTerm]);
+            bool foundObject = false;
+            while (!foundObject) {
+                stringToTest = GetWordFromString(action, wordIndex);
+                if (keywordsToIgnore.Contains(stringToTest)) {
+                    wordIndex++;
+                } else {
+                    foundObject = true;
                 }
+            }
+
+            if (Items.itemNames.ContainsKey(stringToTest)) {
+                Item item;
+                Items.itemNames.TryGetValue(stringToTest, out item);
+                Inventory.AddItem(item);
             } else {
-                Chat.Notification("I don't know what " + secondTerm + " is/are.");
+                Chat.Notification("I don't know what a " + stringToTest + " is.");
             }
 
         }

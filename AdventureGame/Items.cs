@@ -21,32 +21,36 @@ namespace AdventureGame
 
         /// Food Items
         public static Item apple = new Item(
-            "Apple",
+            "apple",
+            "apples",
             1,
             Item.ItemType.Food);
         public static Item bread = new Item(
-            "Loaf of Bread",
+            "loaf of bread",
+            "loafs of bread",
             2,
             Item.ItemType.Food
             );
 
         /// Weapons
         public static Item swordIron = new Item(
-            "Iron Sword",
+            "iron sword",
+            "iron swords",
             35,
             Item.ItemType.Weapon
             );
         public static Item swordSteel = new Item(
-            "Steel Sword",
+            "steel sword",
+            "steel swords",
             53,
             Item.ItemType.Weapon
             );
 
         /// Armours
         public static Item helmetIron = new Item(
-            "Iron Helmet",
+            "iron helmet",
+            "iron helmets",
             25,
-            Item.ItemType.Armour,
             Item.ArmourSlot.Head
             );
 
