@@ -47,11 +47,57 @@ namespace AdventureGame
             );
 
         /// Armours
+        public static Item helmetLeather = new Item(
+            "leather helmet",
+            "leather helmets",
+            5,
+            Item.ArmourSlot.Head);
+        public static Item chestPlateLeather = new Item(
+            "leather chestplate",
+            "leather chestplates",
+            7,
+            Item.ArmourSlot.Chest
+            );
+        public static Item shoulderPadsLeather = new Item(
+            "leather shoulderplate",
+            "leather shoulderplates",
+            3,
+            Item.ArmourSlot.PauldronLeft
+            );
+        public static Item helmetRoseGlass = new Item(
+            "rose glass helmet",
+            "rose glass helmets",
+            15,
+            Item.ArmourSlot.Head
+            );
+        public static Item chestPlateRoseGlass = new Item(
+            "rose glass chestplate", 
+            "rose glass chestplates", 
+            17, 
+            Item.ArmourSlot.Chest);
+        public static Item shoulderPadsRoseGlass = new Item(
+            "rose glass shoulderpad", 
+            "rose glass shoulderpads", 
+            13, 
+            Item.ArmourSlot.PauldronLeft
+            );
         public static Item helmetIron = new Item(
             "iron helmet",
             "iron helmets",
             25,
             Item.ArmourSlot.Head
+            );
+        public static Item chestPlateIron = new Item(
+            "iron chestplate", 
+            "iron chestplates", 
+            27, 
+            Item.ArmourSlot.Chest
+            );
+        public static Item shouldePadsIron = new Item(
+            "iron shoulderpad", 
+            "iron shoulderpads", 
+            23, 
+            Item.ArmourSlot.PauldronLeft
             );
 
     }
