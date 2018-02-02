@@ -269,6 +269,8 @@ namespace AdventureGame {
                 Chat.Notification("I don't know what a " + stringToTest + " is.");
             }
 
+            Chat.Notification(Items.itemNames["loaf of bread"].GetMultipleName());
+
         }
 
     }
