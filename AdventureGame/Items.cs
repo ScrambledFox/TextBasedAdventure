@@ -33,18 +33,41 @@ namespace AdventureGame
             );
 
         /// Weapons
+        public static Item spearWood = new Item(
+            "rose glass sword",
+            "rose glass swords", 
+            8,
+            Item.ItemType.Weapon
+            );
+        public static Item spearRoseGlass = new Item(
+            "rose glass spear", 
+            "rose glass spears", 
+            13, 
+            Item.ItemType.Weapon);
+        public static Item swordRoseGlass = new Item(
+            "rose glass sword", 
+            "rose glass swords", 
+            25, 
+            Item.ItemType.Weapon);
+        public static Item axeRoseGlass = new Item(
+            "rose glass axe",
+            "rose glass axes",
+            35,
+            Item.ItemType.Weapon);
         public static Item swordIron = new Item(
             "iron sword",
             "iron swords",
             35,
             Item.ItemType.Weapon
             );
+        public static Item axeIron = new Item();
         public static Item swordSteel = new Item(
             "steel sword",
             "steel swords",
             53,
             Item.ItemType.Weapon
             );
+        public static Item axeSteel = new Item();
 
         /// Armours
         public static Item helmetLeather = new Item(
