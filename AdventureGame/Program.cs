@@ -1,5 +1,5 @@
 ﻿/*
- * The Nine Scrolls
+ * The Nine Scrolls (C)
  * by Joris (A.J.) Lodewijks, 05/09/2017
  *
  */
@@ -29,17 +29,20 @@ namespace AdventureGame
 
         public static void StartGame()
         {
-            // Title Screen
-            Chat.TitleScreen();
-
-            // Ask for the player's name, confirm it, then start adventure.
-            AskForName();
-            Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
-
-            Chat.Wait();
             Chat.Clear();
 
+            // Title Screen
+            //Chat.TitleScreen();
+
+            // Ask for the player's name, confirm it, then start adventure.
+            //AskForName();
+            //Chat.Notification("Okay then, " + playerName + ". Your adventure will begin now!");
+
+            //Chat.Wait();
+            //Chat.Clear();
+
             // Chat test
+<<<<<<< HEAD
             Chat.DoSpace();
             Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
 
@@ -48,6 +51,17 @@ namespace AdventureGame
             // Items test
             Chat.DoSpace();
             Inventory.AddItem(Items.apple);
+=======
+            while (true) {
+                Chat.Clear();
+                Actions.Decoder(Chat.GetAction());
+            }
+
+            //Chat.GetAction();
+            
+            // Items test
+            //Inventory.AddItem(Items.apple);
+>>>>>>> 883f002a82167ad2f421d6fa1a4e0ab713d1b3e6
 
         }
 
