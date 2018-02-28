@@ -40,11 +40,13 @@ namespace AdventureGame
             Chat.Clear();
 
             // Chat test
+            Chat.DoSpace();
             Chat.Say("Gekke Henk", "Ik ga je moeder vermoorden!");
 
             Chat.GetAction();
-            
+
             // Items test
+            Chat.DoSpace();
             Inventory.AddItem(Items.apple);
 
         }
