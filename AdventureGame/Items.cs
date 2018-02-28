@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * The Nine Scrolls (C)
+ * by Joris (A.J.) Lodewijks, 05/09/2017
+ *
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,34 +17,110 @@ namespace AdventureGame
     public static class Items
     {
 
+        public static Dictionary<string, Item> itemNames = new Dictionary<string, Item>();
+
         /// Food Items
         public static Item apple = new Item(
-            "Apple",
+            "apple",
+            "apples",
             1,
             Item.ItemType.Food);
         public static Item bread = new Item(
-            "Loaf of Bread",
+            "loaf of bread",
+            "loafs of bread",
             2,
             Item.ItemType.Food
             );
 
         /// Weapons
+        public static Item spearWood = new Item(
+            "rose glass sword",
+            "rose glass swords", 
+            8,
+            Item.ItemType.Weapon
+            );
+        public static Item spearRoseGlass = new Item(
+            "rose glass spear", 
+            "rose glass spears", 
+            13, 
+            Item.ItemType.Weapon);
+        public static Item swordRoseGlass = new Item(
+            "rose glass sword", 
+            "rose glass swords", 
+            25, 
+            Item.ItemType.Weapon);
+        public static Item axeRoseGlass = new Item(
+            "rose glass axe",
+            "rose glass axes",
+            35,
+            Item.ItemType.Weapon);
         public static Item swordIron = new Item(
-            "Iron Sword",
+            "iron sword",
+            "iron swords",
             35,
             Item.ItemType.Weapon
             );
+        public static Item axeIron = new Item();
         public static Item swordSteel = new Item(
-            "Steel Sword",
+            "steel sword",
+            "steel swords",
             53,
             Item.ItemType.Weapon
             );
+        public static Item axeSteel = new Item();
 
         /// Armours
+        public static Item helmetLeather = new Item(
+            "leather helmet",
+            "leather helmets",
+            5,
+            Item.ArmourSlot.Head);
+        public static Item chestPlateLeather = new Item(
+            "leather chestplate",
+            "leather chestplates",
+            7,
+            Item.ArmourSlot.Chest
+            );
+        public static Item shoulderPadsLeather = new Item(
+            "leather shoulderplate",
+            "leather shoulderplates",
+            3,
+            Item.ArmourSlot.PauldronLeft
+            );
+        public static Item helmetRoseGlass = new Item(
+            "rose glass helmet",
+            "rose glass helmets",
+            15,
+            Item.ArmourSlot.Head
+            );
+        public static Item chestPlateRoseGlass = new Item(
+            "rose glass chestplate", 
+            "rose glass chestplates", 
+            17, 
+            Item.ArmourSlot.Chest);
+        public static Item shoulderPadsRoseGlass = new Item(
+            "rose glass shoulderpad", 
+            "rose glass shoulderpads", 
+            13, 
+            Item.ArmourSlot.PauldronLeft
+            );
         public static Item helmetIron = new Item(
-            "Iron Helmet",
+            "iron helmet",
+            "iron helmets",
             25,
-            Item.ItemType.Armour
+            Item.ArmourSlot.Head
+            );
+        public static Item chestPlateIron = new Item(
+            "iron chestplate", 
+            "iron chestplates", 
+            27, 
+            Item.ArmourSlot.Chest
+            );
+        public static Item shouldePadsIron = new Item(
+            "iron shoulderpad", 
+            "iron shoulderpads", 
+            23, 
+            Item.ArmourSlot.PauldronLeft
             );
 
     }

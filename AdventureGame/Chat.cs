@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * The Nine Scrolls (C)
+ * by Joris (A.J.) Lodewijks, 05/09/2017
+ *
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,7 +48,7 @@ namespace AdventureGame
         /// <param name="nameOfSource">The name of the talking source.</param>
         /// <param name="message">The message that will be displayed.</param>
         public static void Say ( string nameOfSource, string message ) {
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
 
             Console.SetCursorPosition(10, Console.CursorTop);
@@ -71,7 +76,10 @@ namespace AdventureGame
         }
 
         public static void Clear () {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
+            Console.WriteLine("");
         }
 
         public static void Wait () {
@@ -88,6 +96,13 @@ namespace AdventureGame
             string answer = Console.ReadLine();
             Chat.Clear();
             return answer;
+        }
+
+        public static void Error (string message) {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(message);
         }
 
 

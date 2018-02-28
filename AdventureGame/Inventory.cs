@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * The Nine Scrolls (C)
+ * by Joris (A.J.) Lodewijks, 05/09/2017
+ *
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +14,6 @@ namespace AdventureGame {
 
 
         static List<Item> inventory = new List<Item>();
-
-        public enum ArmourSlots
-        {
-            Head, Chest, PauldronLeft, PauldronRight, Legs, BootsLeft, BootsRight, GlovesLeft, GlovesRight
-        }
-
 
         public static void AddItem (Item item) {
             inventory.Add(item);
