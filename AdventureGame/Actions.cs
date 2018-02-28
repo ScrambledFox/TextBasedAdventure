@@ -105,6 +105,7 @@ namespace AdventureGame {
                     // inside something
                     // under something
                     // up text in something
+                    // for something
                     break;
                 case "no":
                     break;
@@ -268,8 +269,6 @@ namespace AdventureGame {
             } else {
                 Chat.Notification("I don't know what a " + stringToTest + " is.");
             }
-
-            Chat.Notification(Items.itemNames["loaf of bread"].GetMultipleName());
 
         }
 
